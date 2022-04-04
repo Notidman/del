@@ -11,23 +11,14 @@ namespace del
   class ArgsParser final
   {
   public:
-    ArgsParser (std::unique_ptr<std::vector<TypeString>> &&env);
+    ArgsParser (std::unique_ptr<std::vector<TypeString>> &&env)
+    {
+    }
 
     std::unique_ptr<std::vector<TypeString>>&&
     files();
 
-    bool total();
-    bool dir();
-    bool no();
-    bool force();
-    bool recursive();
-
   private:
-    bool total_      = false;
-    bool dir_        = false;
-    bool no_         = false;
-    bool force_      = false;
-    bool recursive_  = false;
   };
 }
 
