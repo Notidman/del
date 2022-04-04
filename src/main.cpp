@@ -21,7 +21,7 @@ main(int argc, char **argv)
     // create container for argv
     auto env{std::make_unique<std::vector<std::string>>(argv, argv + argc)}; 
 
-    // Parse argv, on files and on flags
+    // Parse argv into files and flags
     auto argsParser{std::make_unique<
       del::ArgsParser<std::string>>(std::move(env))};
 
