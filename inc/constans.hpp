@@ -21,13 +21,6 @@ namespace del
         {"help",  "h", "?"},
         {"total", "t", "!"},
       };
-
-    enum class commands
-    {
-      remove = 0,
-      help,
-      total,
-    };
   }
 }
 

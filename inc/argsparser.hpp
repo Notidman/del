@@ -1,10 +1,11 @@
 #pragma once
-#include <algorithm>
 #ifndef ARGSPARSER_HPP_WTVN9KSJ
 #define ARGSPARSER_HPP_WTVN9KSJ
 #include <string>
 #include <memory>
 #include <vector>
+#include <algorithm>
+#include <optional>
 #include "constans.hpp"
 
 namespace del
@@ -23,17 +24,18 @@ namespace del
     files();
 
   private:
-    constans::commands find_command(TypeString&& env)
+    std::optional<TypeString> find_command(TypeString&& command)
     {
       for(const auto&fl:constans::flags)
       {
-        if ( std::find(fl.cbegin(), fl.cend(), env) )
+        auto cmd = std::find(fl.cbegin(), fl.cend(), command );
+        if ( cmd != fl.cend() )
         {
-          return 
+          return std::make_optional<TypeString>(*cmd);
         }
       }
 
-      return 
+      return std::nullopt;
     }
   };
 }

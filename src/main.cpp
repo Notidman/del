@@ -2,9 +2,9 @@
 /*|+----------------------------------------------------------------------+|*\
  *|   ProgramName: del // del - safe alternative rm                        |*
  *|   License: GPL3                                                        |*
- *|   Author: Notidman                                                     |*
+ *|   Author: Ezi                                                          |*
  *|   Language: C++20                                                      |*
- *|   Copyright © 2022 Notidman. All Rights Reserved.                      |*
+ *|   Copyright © 2022 Ezi . All Rights Reserved.                          |*
 \*|+---------------------------------| DEL |------------------------------+|*/
 
 #include <iostream>
